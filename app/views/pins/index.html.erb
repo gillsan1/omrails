@@ -1,29 +1,20 @@
 <h1>Listing pins</h1>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody> 
-      <% @pins.each do |pin| %>
+    <table class="table table-striped">
+        <thead>
             <tr>
-        <td><%= pin.description %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <% if current_user == pin.user %>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-    </tr>
-      <% end %>
-    </tbody>
-</table>
+                <th>Description</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
 
-<br />
+        <tbody>
+            <%= render @pins %>
+        </tbody>
+    </table>
 
-<%= link_to 'New Pin', new_pin_path %>
+    <br />
+
+    <%= link_to 'New Pin', new_pin_path %>

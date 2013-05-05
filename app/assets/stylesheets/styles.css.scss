@@ -3,8 +3,12 @@ $baseFontFamily: Oxygen;
 
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
+$btnPrimaryBackground: blue;
 
 @import 'bootstrap';
+body{
+    padding-top: 60px;
+}
 @import 'bootstrap-responsive'; 
 
 body {
