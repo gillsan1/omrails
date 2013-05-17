@@ -72,9 +72,9 @@ Omrails::Application.configure do
   config.paperclip_defaults = {
        :storage => s3,
        :s3_credentials => {
-         :bucket => "onlineclass",
-         :secret_key_id => "AKIAJVWLSFVYIWPX7AAA",
-         :secret_access_key => "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",
+         :bucket => ENV ['onlineclass'],
+         :secret_key_id => ENV['AKIAJVWLSFVYIWPX7AAA'],
+         :secret_access_key => ENV['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'],
        }
      }
 end
